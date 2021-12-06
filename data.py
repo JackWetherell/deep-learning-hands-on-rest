@@ -68,8 +68,8 @@ def generate(grid_points, count, seed=1):
     plt.gcf().clear()
 
     # Set up system.
-    x = np.linspace(-15, 15, 100)
-    v_ext = lambda x: 0.0*x
+    x = np.linspace(-15, 15, grid_points)
+    v_ext = lambda x: 0.0*x # Placeholder.
     v_int = iDEA.interactions.softened_interaction
     s = iDEA.system.System(x, v_ext(x), v_int(x), NE=1, spin='u')
 
