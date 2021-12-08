@@ -433,8 +433,6 @@ for i in range(axs.shape[0]):
 plt.savefig('v_predictions.pdf')
 
 
-# **Task: Can you modify the code above the produce a more accurate functional when applied to the test systems. Consider modifying the parameters of the model, such as the kernals of the convolutions, the number of dense layers, the learning rate, number of epochs ect...**
-
 # ## 4. Learning the functional of the charge density.
 
 # We can now begin to investigate in a simple way, **of which quantity is it best to build a given functional from?**. We can take the *identical model* from above, that we used to train $E[V_\mathrm{ext}(x)]$, and use it to instead train $E[n(x)]$. Does this model yield better results? Is it harder to train?
@@ -474,6 +472,8 @@ E_pred = model.predict(n_test[:N, :, :])
 
 
 # We can see that building a funtional of the density is more difficult for the machine to learn for an equivelent mode, why is this? (For example, a shift in the potential shifts the energy, but has no effect on the density.)
+# 
+# **Task: Can you modify the code above the produce a more accurate functional when applied to the test systems. Consider modifying the parameters of the model, such as the kernals of the convolutions, the number of dense layers, the learning rate, number of epochs ect...**
 
 # In[17]:
 
