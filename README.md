@@ -17,7 +17,7 @@ To install using pip:
 
 To install using poetry:
 
-`potery install`
+`poetry install`
 
 `poetry shell`
 
